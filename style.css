@@ -1,0 +1,416 @@
+ *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* fallback color */
+    background-color: #4b9fa2; 
+    
+    /* layered background with a gradient and semi-transparent overlay */
+    background-image: 
+        linear-gradient(135deg, #0d33f0 0%, #f31111 100%),
+        linear-gradient(rgba(189, 0, 88, 0.5), rgba(8, 117, 103, 0.5)),
+        url("img[part 2]/pexels-anna-shvets-4226119.jpg");
+        
+    /* positioning and sizing */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    font-family: 'Garamond', 'Georgia', serif;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    color: rgb(75, 2, 2);
+}
+
+/* headings with a different font and style */
+h1, h2, h3 {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+    
+    /* text shadow for better readability */
+    text-shadow: 1px 1px 2px rgb(13, 75, 232);
+}
+
+/* caption styling for images */
+caption {
+    font-family: 'Garamond', 'Georgia', serif;
+    font-size: 0.9rem;
+    color: rgb(75, 2, 2);
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+
+nav {
+    background-color: rgba(200, 26, 171, 0.8);
+    padding: 10px;
+    border-radius: 2px;
+    border-right: 4px solid rgb(255, 0, 17);
+    box-shadow: 0 4px 6px rgb(255, 102, 0);
+    margin-bottom: 10px;
+}
+nav {
+    /* coordinates position relative to the screen during scroll */
+    position: sticky;
+    top: 0;
+    
+    /* ensures the navigation sits above all other content on the page */
+    z-index: 1000;
+} 
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+ul li a {
+    display: block;
+    color: rgb(17, 2, 79);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* hover pseudo-class for links */
+ul li a:hover {
+    background-color: #660a0a;
+}
+
+/* responsive images setup */
+img, picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* centering website images and adding a border */
+img {
+    margin: 20px auto;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+/* styling for paragraphs */
+p {
+    background-color: rgba(243, 21, 239, 0.952);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    color: rgb(75, 2, 2);
+}
+ 
+
+/* mobile breakpoints and media queries */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    ul li {
+        width: 100%;
+    }
+
+    ul li a {
+        text-align: left;
+        padding: 12px 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    p {
+        background-color: rgba(243, 21, 239, 0.952);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        color: rgb(75, 2, 2);
+    }
+    }
+ 
+
+/* forces the footer down to the absolute bottom of the screen */
+footer {
+    margin-top: auto;
+    background-color: rgba(4, 2, 69, 0.9);
+    padding: 20px;
+    border-top: 3px solid rgba(99, 3, 3, 0.8);
+    color: #f6f2f2;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+     
+     /* Center the form specifically */
+.form-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0; /* Adds space above and below the form */
+}
+
+/* Form styling */
+#checkoutForm {
+    width: 90%;          /* Responsive width */
+    max-width: 500px;    /* Prevents it from getting too wide */
+    padding: 30px;
+    border: 5px solid #87CEEB; /* Your signature Sky Blue border */
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Ensure inputs look good inside the box */
+#checkoutForm label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#checkoutForm input, 
+#checkoutForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #3207f2;
+    border-radius: 5px;
+    box-sizing: border-box; /* Crucial for keeping inputs inside the container */
+}
+
+#checkoutForm input[type="submit"] {
+    background-color: #ec0850;
+    color: rgb(14, 241, 29);
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#angelForm input[type="submit"] {
+    background-color: #87CEEB;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* This is the animation */
+}
+
+#angelForm input[type="submit"]:hover {
+    background-color: #1E90FF; /* Darker shade of Sky Blue */
+}
+
+.typewriter h1 {
+  font-family: monospace; /* Monospace for typing effects */
+  overflow: hidden; /* Ensures text is hidden until it types */
+  border-right: .15em solid #87CEEB; /* The blinking cursor */
+  white-space: nowrap; /* Keeps the text on one line */
+  margin: 0 auto; 
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .75s step-end infinite;
+}
+
+    /*  Parent container makes sure everything stays centered */
+.typing-container {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    width: 100%;
+}
+
+/*  The text styling */
+.your-text-class {
+    overflow: hidden;         /* Keep the text invisible until typed */
+    white-space: nowrap;      /* Keep the text on one line */
+    border-right: 3px solid;  /* The "typing cursor" */
+    width: 0;                 /* Starts at 0 width */
+    animation: 
+        typing 4s steps(10, end) forwards, /* 'forwards' keeps it visible at the end */
+        blink 0.1s step-end infinite;
+    margin: 0;                /* Removes default browser margins */
+}
+
+/* 3. The animation logic */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; } /* Grows to show all text */
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: black; } /* Cursor color */
+}
+
+
+/* Apply this to the main container or body */
+body {
+    animation: pageLoad 0.6s ease-out;
+}
+
+/* This applies the transition to the image */
+.rug-img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    display: block; /* Ensures the image behaves like a block element */
+    margin: 0 auto; /* Keeps it centered if it's the only item */
+}
+
+/* This is the magic that happens when you hover */
+.rug-img:hover {
+    transform: scale(1.05); /* Gently zooms in by 5% */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Adds a deep, realistic shadow */
+}
+
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8); /* Dark transparent background */
+    cursor: zoom-out;
+}
+
+.lightbox-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 5%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Initial state: element is hidden and slightly lower */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.0s ease-out;
+}
+
+/* Active state: element slides up and fades in */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+ 
+
+.gallery-grid {
+    display: grid;
+    /* This creates 3 columns of equal width, and as many rows as needed */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; /* Space between grid items */
+    padding: 20px;
+}
+
+.rug-img {
+    width: 100%;
+    height: 200px; /* Forces every box to be the exact same height */
+    object-fit: cover; /* Crops the image so it fills the box without stretching */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/*  Subtle zoom effect to make it look  */
+.rug-img:hover {
+    transform: scale(1.03);
+}
+
+
+
+
+
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.rug-card {
+    background-color: #770101; /* Dark background */
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    color: rgb(9, 2, 70);
+    transition: transform 0.3s ease;
+}
+
+.rug-card:hover {
+    transform: scale(1.05); /* Subtle lift on hover */
+}
+
+.rug-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.rug-title {
+    font-size: 16px;
+    margin: 10px 0 5px 0;
+}
+
+.rug-price {
+    font-weight: bold;
+    color: #457003; /* A nice red color for the price */
+    margin: 0;
+}
+
+
+
+/* The container for your category buttons */
+.filter-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05); /* Subtle glass-like background */
+    border-radius: 50px; /* Fully rounded 'pill' shape */
+    backdrop-filter: blur(10px); /* Makes it look modern and blurred */
+}
+
+/* The style for individual buttons */
+.filter-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #5d3f6a; /* Matches your design theme */
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+/* Add a hover effect to make it interactive */
+.filter-btn:hover {
+    background: #ff4757;
+    transform: scale(1.1);
+}
